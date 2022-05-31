@@ -6,12 +6,14 @@ const nextConfig = {
   },
   images: {
     domains: [
-      'kajabi-storefronts-production.kajabi-cdn.com',
-      'upload.wikimedia.org',
-      'i.ytimg.com',
-      'angartwork.akamaized.net'
+      "kajabi-storefronts-production.kajabi-cdn.com",
+      "upload.wikimedia.org",
+      "i.ytimg.com",
+      "angartwork.akamaized.net",
+      "i.scdn.co",
+      "resources.tidal.com",
     ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
