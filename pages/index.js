@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Login</title>
+        <title>Spotify Blockchain - Login</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
