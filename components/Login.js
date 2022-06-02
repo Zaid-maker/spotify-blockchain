@@ -1,6 +1,6 @@
 import { useWallet } from "@solana/wallet-adapter-react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { Payment } from "./payment";
+import { Payment } from "./Payment";
 
 const styles = {
   loginPage: `w-screen h-screen bg-white flex justify-center flex-col items-center`,
