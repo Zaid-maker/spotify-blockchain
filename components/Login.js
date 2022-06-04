@@ -1,6 +1,6 @@
 import { useWallet } from '@solana/wallet-adapter-react'
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
-import { Payment } from './Payment'
+import Payment from './Payment'
 
 const styles = {
   loginPage: `w-screen h-screen bg-white flex justify-center flex-col items-center`,
@@ -8,9 +8,9 @@ const styles = {
 }
 
 const Login = () => {
-  //const wallet = useWallet()
+  const wallet = useWallet()
 
-  //if (wallet.connected) return <Payment />
+  if (wallet.connected) return <Payment />
 
   return (
     <div className={styles.loginPage}>
