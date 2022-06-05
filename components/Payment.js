@@ -55,7 +55,7 @@ const Payment = () => {
     let payerInfo
 
     try {
-      payerInfo = await program.account.payAccount.fetch(payerSigner)
+      payerInfo = await program.account.payerAccount.fetch(payerSigner)
     } catch (e) {
       try {
         await program.rpc.acceptPayment({
@@ -68,6 +68,7 @@ const Payment = () => {
             ...defaultAccounts,
           },
         })
+        alert('Transaction proceed')
       } catch (e) {
         alert(e.message)
       }
@@ -75,18 +76,21 @@ const Payment = () => {
   }
 
   if (isPaid) return <HomePage />
+
   return (
     <div className={styles.main}>
-      <p className={styles.text}>Make Payment to use the service.</p>
+      <p className={styles.text}>Make payment to use this service.</p>
       <div className={styles.buttons}>
         <button
           className={styles.button}
           onClick={payClicked}
           disabled={isPaid}
         >
-          Pay 0.1 SOL
+          Pay 0.1 Sol
         </button>
-        <button className={styles.button}>Verify Payment</button>
+        <button className={styles.button} onClick={getAllWallets}>
+          Update List
+        </button>
       </div>
     </div>
   )
