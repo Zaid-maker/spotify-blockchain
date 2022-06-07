@@ -5,12 +5,25 @@ const styles = {
 }
 
 const TableRow = ({ props }) => {
+  // const { playOnSelect } = useContext(SpotifyContext)
+
   return (
-    <thbody>
+    <tbody>
       <tr>
-        <th className={styles.th}>{props}</th>
+        <th className={styles.th}>{props.index}</th>
+        <th className={styles.th}>
+          <div>
+            <p className="font-bold">{props.title}</p>
+            <p className="opacity-50">{'artist'}</p>
+            {/* <p className="opacity-50">{props.artiste}</p> */}
+          </div>
+        </th>
+        <th className={styles.th}>{'10,000'}</th>
+        {/* <th className={styles.th}>{props.plays}</th> */}
+        <th className={styles.th}>{'2:43'}</th>
+        {/*<th className={styles.th}>{props.songLength}</th> */}
       </tr>
-    </thbody>
+    </tbody>
   )
 }
 
