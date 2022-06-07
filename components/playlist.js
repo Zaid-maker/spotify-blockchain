@@ -13,17 +13,17 @@ const Playlist = ({ songs }) => {
         <tbody className={styles.tableHeader}>
           <tr>
             <th className="pb-3">#</th>
-            <th className="pb-3">Title</th>
+            <th className="pb-3">TITLE</th>
             <th className="pb-3">PLAYS</th>
             <th className="pb-3">
-              <img src="assets/time.svg" alt="time" />
+              <img alt="" src="assets/time.svg" />
             </th>
           </tr>
         </tbody>
         <tbody className="mb-6 block"></tbody>
 
         {songs.map((song) => {
-          return <TableRow key={song.id} song={song.account} />
+          return <TableRow key={song.id} props={song.account} />
         })}
       </table>
     </div>
