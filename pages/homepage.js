@@ -5,6 +5,7 @@ import Playlist from '../components/playlist'
 import Header from '../components/Header'
 import PlayerControls from '../components/PlayerControls'
 import UploadModal from '../components/UploadModal'
+import useSpotify from '../hooks/useSpotify'
 import Head from 'next/head'
 
 const HomePage = () => {
@@ -13,10 +14,18 @@ const HomePage = () => {
   const [musicUrl, setMusicUrl] = useState('')
   const [songs, setSongs] = useState([])
 
+  const { newMusic, getSongs } = useSpotify(
+    musicUrl,
+    title,
+    setTitle,
+    setMusicUrl,
+    setShowUploadMusic
+  )
+
   useEffect(() => {
-    //getSongs().then((songs) => {
-    //  setSongs(songs)
-    //})
+    getSongs().then((songs) => {
+      setSongs(songs)
+    })
   }, [])
 
   return (
@@ -31,7 +40,16 @@ const HomePage = () => {
         <Header setShowUploadMusic={setShowUploadMusic} />
         <Playlist songs={songs} />
         <PlayerControls songs={songs} />
-        {showUploadMusic && <UploadModal />}
+        {showUploadMusic && (
+          <UploadModal
+            title={title}
+            setTitle={setTitle}
+            setShowUploadMusic={setShowUploadMusic}
+            musicUrl={musicUrl}
+            setMusicUrl={setMusicUrl}
+            newMusic={newMusic}
+          />
+        )}
       </div>
       <Activity />
     </div>

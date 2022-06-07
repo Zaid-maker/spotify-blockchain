@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import UploadButton from './UploadButton'
 
 const style = {
   arrowButton: `bg-black mr-2 w-10 h-10 flex items-center justify-center rounded-full bg-opacity-50 cursor-pointer hover:bg-opacity-75`,
@@ -28,7 +29,7 @@ const Header = ({ setShowUploadMusic }) => {
         </div>
 
         <div className={style.headerRight}>
-          {/* <UploadButton setShowUploadMusic={setShowUploadMusic} /> */}
+          <UploadButton setShowUploadMusic={setShowUploadMusic} />
 
           <div className={style.profile}>
             <div className={style.profileAvatarContainer}>
