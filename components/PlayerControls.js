@@ -47,6 +47,12 @@ const PlayerControls = ({ songs }) => {
           <div className={styles.controlIcon}>
             <Image src={shuffle} />
           </div>
+          <div
+            //onClick={e => playPrevious(songs)}
+            className={styles.controlIcon}
+          >
+            <Image src={previous} />
+          </div>
         </div>
       </div>
     </div>
