@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { SpotifyContext } from '../../context/context'
 
 const styles = {
   th: `pb-5 hover:opacity-50 cursor-pointer`,
 }
 
 const TableRow = ({ props }) => {
-  // const { playOnSelect } = useContext(SpotifyContext)
+  const { playOnSelect } = useContext(SpotifyContext)
 
   return (
     <tbody>
-      <tr>
+      <tr onClick={() => playOnSelect(props)}>
         <th className={styles.th}>{props.index}</th>
         <th className={styles.th}>
           <div>
