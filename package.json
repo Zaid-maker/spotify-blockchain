@@ -19,7 +19,7 @@
     "@solana/wallet-adapter-wallets": "^0.15.5",
     "@solana/web3.js": "^1.37.0",
     "ardrive-core-js": "^1.13.0",
-    "autoprefixer": "^10.4.4",
+    "autoprefixer": "^10.4.12",
     "axios": "^0.27.2",
     "dotenv": "^16.0.0",
     "multiparty": "^4.2.3",
