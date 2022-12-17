@@ -4227,10 +4227,10 @@ parent-module@^1.0.0:
   dependencies:
     callsites "^3.0.0"
 
-parse-multipart-data@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/parse-multipart-data/-/parse-multipart-data-1.3.0.tgz#052b5da3866cdc73c5d11727cbe9a6e33acf3feb"
-  integrity sha512-ymOiW2z+Ld3UxKdICkS8Ts0EKAQH5IhM/CbqRYf/oY1JbSGrL/4HZcv729EHR5apGDSaD1Le8tT8A22OjBzZrg==
+parse-multipart-data@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/parse-multipart-data/-/parse-multipart-data-1.5.0.tgz#ab894cc6c40229d0a2042500e120df7562d94b87"
+  integrity sha512-ck5zaMF0ydjGfejNMnlo5YU2oJ+pT+80Jb1y4ybanT27j+zbVP/jkYmCrUGsEln0Ox/hZmuvgy8Ra7AxbXP2Mw==
 
 path-exists@^3.0.0:
   version "3.0.0"
